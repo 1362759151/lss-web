@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .d1{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+        .green{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1" id="div"></div>
+    <script>
+       var a = 10;
+       var b = 20;
+       //你要比较的内容 ? 对 : 不对
+    //    a > b ?  alert('对') : alert('不对');
+       document.getElementById('div').onclick = function(){
+           div.className=='d1' ? div.className='green':div.className='d1';
+       }
+    </script>
+</body>
+</html>

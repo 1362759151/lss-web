@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .a{
+            background-color: rgb(255,0,149);
+        }
+        .b{
+            width: 1850px;
+            height: 950px;
+        }
+        .c{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="a b" id="mydiv">
+
+    </div>
+    <button id="btn">FUCK</button>
+    <script>
+        var a = 0;
+        var mydiv = document.getElementById('mydiv');
+        var btn = document.getElementById('btn');
+        mydiv.onclick = function(){
+                if(a++%2 == 0){
+                mydiv.className = 'b c';
+            }else{
+                mydiv.className = 'b a';
+            }
+        }
+        a();
+    </script>
+</body>
+</html>

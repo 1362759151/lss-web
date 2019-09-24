@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <img src="j.jpg" alt="">
+    <img src="d.gif" alt="">
+      <script>
+          var imgs = document.getElementsByTagName('img');
+          var imgg1 =  imgs[0].getAttribute('src');
+          var imgg2 =  imgs[1].getAttribute('src');
+          console.log(imgg1.indexOf('jpg'));
+          console.log(imgg2);
+      </script>
+</body>
+</html>

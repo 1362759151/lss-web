@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="i1">
+    <script>
+        var i1 = document.getElementById('i1');
+        var xb = confirm('女士请点击是,男士请点击否');
+       // console.log(xb)
+        i1.oninput = function(){
+            xb == true && i1.value == '2019-03-08' ? alert('今天是妇女节,您将享受五折优惠') : alert('欢迎下次光临');
+        }
+    </script>
+</body>
+</html>

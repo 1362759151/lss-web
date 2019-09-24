@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #q{
+          background-color: red;   
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var a = document.body;
+        var b = a.innerHTML = '<ul><li>111</li><li>222</li><li>333</li></ul>';
+        var c = a.getElementsByTagName('li');
+        var d = c[1].setAttribute('id','q');
+    </script>
+</body>
+</html>
