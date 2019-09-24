@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var kh = 123456789;
+       var mm = 123456;
+       var ye = 100;
+       function a1(){
+         for(var i = 1;i<4;i++){
+       	   var kh1 = parseInt(prompt('请输入卡号'));
+         if(kh1 == kh){
+          	for(var i1 = 1;i1<4;i1++){
+            var mm1 = parseInt(prompt('请输入密码'));
+          	 if(mm1 == mm){
+          	 	alert('您卡内余额为:'+ye+'¥');
+          	 	var je = parseInt(prompt('请输入您要取款的金额'));
+          	 	var je1 = parseInt(je);
+          	 	var result = ye - je1;
+          	 	alert('您卡内剩余余额为:'+result+'¥');
+          	 	break;
+        	 }else{
+        	 	if(i1 == '3'){
+            	alert('取款失败,请取卡')
+            }else{
+            	alert('密码错误，请重新输入');
+            }
+           }
+         }break;
+        }else{
+            if(i == '3'){
+            	alert('取款失败,请取卡')
+            }else{
+            	alert('卡号错误，请重新输入');
+            }
+        }
+      }
+    }
+       a1();
+    </script>
+</body>
+</html>
