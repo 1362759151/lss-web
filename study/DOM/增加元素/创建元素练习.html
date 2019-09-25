@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+    <ul></ul>
+    <table></table>
+      <script>
+          var a = document.createElement('a');
+          var b = document.getElementsByTagName('h1');
+          b[0].appendChild(a);
+
+
+          var a1 = document.createElement('span');
+          var b2 = document.getElementsByTagName('p');
+          b2[0].appendChild(a1);
+
+          for(var i = 0;i<10;i++){
+            var a3 = document.createElement('li');
+            var b3 = document.getElementsByTagName('ul');
+            b3[0].appendChild(a3);
+          }
+
+          var a4 = document.getElementsByTagName('table');
+          for(var o = 0;o<2;o++){
+            var b4 = document.createElement('tr');
+            var d4 = a4[0].appendChild(b4);
+            for(var i =0;i<3;i++){
+            var c4 = document.createElement('td');
+            d4.appendChild(c4);
+          }
+          }
+      </script>
+</body>
+</html>
