@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            display: block;
+            margin-left: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <img src="1.gif" alt="" id="img">
+    <script>
+        var img = document.getElementById('img');
+        var w =0,s=0,a=0,d=0;  
+        document.onkeydown = function(e){
+            //37 左
+            //38 上
+            //39 右
+            //40 下
+            switch(e.keyCode){
+                case 38:
+                    img.style.marginTop = w * -10 + 'px';
+                    w++;
+                    break;
+                case 40:
+                    img.style.marginTop = s * 10 + 'px';
+                    s++;
+                    break;
+                case 37:
+                    img.style.marginLeft = a * -10 + 'px';
+                    a++;
+                    break;
+                case 39:
+                    img.style.marginLeft = d * 10 + 'px';
+                    d++;
+                    break;
+            }
+        }
+        document.onkeyup = function(e){
+            alert('1');
+        }
+    </script>
+</body>
+</html>

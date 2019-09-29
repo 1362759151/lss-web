@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            position: relative; 
+        } 
+        #mydiv{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+        var mydiv = document.getElementById('mydiv');
+        mydiv.onmousedown = function(e){
+            var ev = e||window.event;
+	        var cX = ev.clientX - parseInt(mydiv.offsetLeft);
+            var cY = ev.clientY - parseInt(mydiv.offsetTop);
+            document.onmousemove = function(e) { //实时改变目标元素obox的位置
+		    	var ev = e || window.event;
+		    	mydiv.style.left = ev.clientX - cX + 'px';
+		    	mydiv.style.top = ev.clientY - cY + 'px';
+                }
+            document.onmouseup = function() {
+                //清除原来函数的位置
+		        document.onmousemove = null;
+		        document.onmouseup = null;
+	        }
+        }
+    </script>
+</body>
+</html>

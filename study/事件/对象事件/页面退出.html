@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        //下面的事件必须要点击一下页面才能触发，直接打开页面就关闭并不会有提示哦
+        window.onbeforeunload = function(e){
+        var e = e||window.Event;
+        return "Are you sure you want to leave?";
+       }
+    </script>
+</body>
+</html>
