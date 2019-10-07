@@ -1,0 +1,41 @@
+/*重写css样式*/
+body{
+	font: 14px "helvetica",Arial;
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+html{
+	margin: 0;
+	padding: 0;
+}
+p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+	font-family: "helvetica";
+	font-weight: normal;
+}
+/*img{
+	vertical-align: middle;
+}*/
+/*内容生成解决的浮动对父元素造成的影响*/
+/*.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}*/
+.lf{
+	float: left;
+}
+.rt{
+	float: right;
+}
+/* iframe{
+	width: 100%;
+	height: 208px;
+} */
