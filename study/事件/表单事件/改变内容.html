@@ -10,10 +10,10 @@
     <input type= "text" id="in1"></input>
     <script>
         var in1 = document .getElementById( 'in1');
-        in1.onfocus = function(){
+        in1.onchange = function(){
         in1.style.backgroundColor = 'blue';
         }
-        in1.onblur = function(){
+        in1.oninput = function(){
         in1.style.backgroundColor = 'red';
     }
     </script>

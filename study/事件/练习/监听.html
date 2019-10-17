@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        div{
+            display: inline-block;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"><img src="1.jpg" alt=""></div>
+    <div id="div2"><img src="2.jpg" alt=""></div>
+    <script>
+        var div1 = document.getElementById('div1');
+        var div2 = document.getElementById('div2');
+
+        div1.addEventListener('dblclick',a,false);
+        div1.addEventListener('click',b,false);
+
+        div2.addEventListener('dblclick',c,false);
+        div2.addEventListener('click',d,false);
+
+        function a(){
+            alert('欢迎登录QQ');
+        }
+        function b(){
+            div1.style.backgroundColor = 'rgb(179,192,208)';
+        }
+        function c(){
+            alert('欢迎登录Wechat');
+        }
+        function d(){
+            div2.style.backgroundColor = 'rgb(179,192,208)';
+        }
+    </script>
+</body>
+</html>

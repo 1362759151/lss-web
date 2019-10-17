@@ -17,10 +17,13 @@
             background-color: blueviolet;
             position: absolute;
         }
+        img{
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <div id="mydiv"></div>
+    <div id="mydiv"><img src="1.jpg" alt=""></div>
     <script>
         var mydiv = document.getElementById('mydiv');
         mydiv.onmousedown = function(e){
@@ -36,7 +39,9 @@
                 //清除原来函数的位置
 		        document.onmousemove = null;
 		        document.onmouseup = null;
-	        }
+            }
+            //取消冒泡
+            return false;
         }
     </script>
 </body>
