@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #box {
+            width: 500px;
+            height: 20px;
+            border: 1px solid black;
+        }
+
+        #a1 {
+            width: 0px;
+            height: 20px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="a1"></div>
+    </div>
+    <script>
+        var box = document.getElementById('box');
+        var a1 = document.getElementById('a1');
+        //进度条
+        // var num = 0;
+        // var timer = null;
+        // var timer = setInterval(function () {
+        //     num++;
+        //     if (num > 100) {
+        //         clearInterval(timer);
+        //     } else {
+        //         a1.style.width = num + '%';
+        //     }
+        // }, 100)
+        //点哪停哪
+        box.onclick = function (e) {
+            a1.style.width = e.clientX-1+'px';
+        }
+    </script>
+</body>
+
+</html>

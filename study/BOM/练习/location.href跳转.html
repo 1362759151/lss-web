@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+	<!--1.创建一个登录界面,含用户名和密码
+    2.登陆后验证密码为123,否则弹出登陆失败
+    3.登陆后跳转到另一个页面,页面上大文子提示提示"欢迎你,xxx",xxx内容为用户名-->
+
+    用户名:<input type="text" id="yhm">
+    密码:<input type="password" id="mm">
+    <button id="btn">登陆</button>
+    <script>
+        var yhm = document.getElementById('yhm');
+        var mm = document.getElementById('mm');
+        var btn = document.getElementById('btn');
+        var num = 123;
+        btn.onclick = function(){
+            if(mm.value == num){
+            	location.href = "location.search接收.html?=" + yhm.value;
+            }else{
+                alert('登陆失败');
+            }
+        }
+    </script>
+</body>
+</html>

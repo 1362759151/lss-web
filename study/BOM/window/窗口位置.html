@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        var x = window.screenX;
+        var y = window.screenY;
+        console.log(x + ',' + y);
+
+
+        //也就是可用resizeTo或者resizeBy
+        //改变窗口大小的只是那些用window.open打开的页面，
+        //并且window.open打开的窗口只能有个tab
+        window.resizeTo(200, 200);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+    	//获取urr中"?"符后的字串
+    	var urr = location.search;
+    	//接上个页面传过来的值
+    	var yhm = '';
+    	//清除?和=
+         if(urr.indexOf("?") != -1) {
+          str = urr.substr(1);
+          strs = str.split("=");
+          yhm = strs[1];
+        }
+		document.body.innerHTML = '欢迎你,' + decodeURI(yhm);
+    </script>
+</body>
+</html>

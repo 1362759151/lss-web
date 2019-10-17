@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        var num = 5;
+        document.getElementById('div').innerHTML = num;
+        //setInterval(function(){},时间);
+        var timer = setInterval(function(){
+            num--;
+            if(num==0){
+                clearInterval(timer);
+                document.getElementById('div').innerHTML = '叮叮';
+            }else{
+                document.getElementById('div').innerHTML = num;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
