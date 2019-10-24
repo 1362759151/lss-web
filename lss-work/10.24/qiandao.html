@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<input type="text" id="ipt">
+		<button id="btn1">签到</button>
+		<button id="btn2">查询未到的人</button>
+		<script>
+			var ipt = document.getElementById('ipt');
+			var btn1 = document.getElementById('btn1');
+			var btn2 = document.getElementById('btn2');
+			var n = '熊熊蛋蛋屁屁绿绿花花纯纯吉吉';
+			var k = [];
+			btn1.onclick = function() {
+				k.push(ipt.value);
+				ipt.value = "";
+				console.log(k)
+			}
+			btn2.onclick = function() {
+				var reg = new RegExp(k.join('|'),"ig");
+				var val = n.replace(reg,"");
+				document.body.innerHTML = '未签到人有:'+val;
+			}
+		</script>
+	</body>
+
+</html>
