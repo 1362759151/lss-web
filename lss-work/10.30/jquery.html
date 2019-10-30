@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="jquery.min.js"></script>
+		<style>
+			li {
+				list-style: none;
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				cursor: pointer;
+				border: 2px solid white;
+				position: absolute;
+				top: 30px;
+				left: 70px;
+			}
+			
+			.d1 {
+				position: relative;
+			}
+			
+			.d1>li:nth-child(1) {
+				width: 150px;
+				height: 150px;
+				background-color: royalblue;
+				position: absolute;
+				top: 0;
+				left: 50px;
+				z-index: 10;
+			}
+			
+			.d1>li:nth-child(2) {
+				background-color: saddlebrown;
+			}
+			
+			.d1>li:nth-child(3) {
+				background-color: seagreen;
+			}
+			
+			.d1>li:nth-child(4) {
+				background-color: skyblue;
+			}
+			
+			.d1>li:nth-child(5) {
+				background-color: pink;
+			}
+			
+			.d1>li:nth-child(6) {
+				background-color: aquamarine;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul class="d1">
+			<li id="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<script>
+			var a = 0;
+			$("#active").click(function() {
+				if(a++ % 2 == 0) {
+					$(".d1>li:nth-child(2)").css({
+						"margin-left": "150px",
+						"transition": "2s"
+					})
+					$(".d1>li:nth-child(3)").css({
+						"margin-left": "250px",
+						"transition": "2s"
+					})
+					$(".d1>li:nth-child(4)").css({
+						"margin-left": "350px",
+						"transition": "2s"
+					})
+					$(".d1>li:nth-child(5)").css({
+						"margin-left": "450px",
+						"transition": "2s"
+					})
+					$(".d1>li:nth-child(6)").css({
+						"margin-left": "550px",
+						"transition": "2s"
+					})
+				} else {
+					$("li").css("margin-left", "0")
+				}
+
+			})
+
+			$(".d1>li:nth-child(2)").click(function() {
+				$(".d1>li:nth-child(1),body").css("background-color", "saddlebrown")
+			})
+			$(".d1>li:nth-child(3)").click(function() {
+				$(".d1>li:nth-child(1),body").css("background-color", "seagreen")
+			})
+			$(".d1>li:nth-child(4)").click(function() {
+				$(".d1>li:nth-child(1),body").css("background-color", "skyblue")
+			})
+			$(".d1>li:nth-child(5)").click(function() {
+				$(".d1>li:nth-child(1),body").css("background-color", "pink")
+			})
+			$(".d1>li:nth-child(6)").click(function() {
+				$(".d1>li:nth-child(1),body").css("background-color", "aquamarine")
+			})
+		</script>
+	</body>
+
+</html>
