@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="jquery.min.js"></script>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<input type="checkbox" id="ch1" name="lx"> 华为mate20 单价:
+		<span id="dj1">11000</span>元
+		<br />
+		<button id="jia1">+</button>
+		<span id="sl1"></span>
+		<button id="jian1">-</button> 共:
+		<span id="hj1"></span>元
+		<br />
+		<br />
+		<input type="checkbox" id="ch2" name="lx"> 小米8 单价:
+		<span id="dj2">1400</span>
+		<br />
+		<button id="jia2">+</button>
+		<span id="sl2"></span>
+		<button id="jian2">-</button> 共:
+
+		<span id="hj2"></span>
+		<br> 共
+		<span id="hjsl"></span>件商品 共
+		<span id="hjjg"></span>元
+		<script>
+			var a = 0;
+			var b = 0;
+			var c = 0;
+			var d = 0;
+			var e = 0;
+			$("#sl1").html(a)
+			$("#hjsl").html(e)
+			$("#hjjg").html(e)
+			$("#hj1").html(b)
+			$("#sl2").html(c)
+			$("#hj2").html(d)
+			//加1
+			$("#jia1").click(function() {
+				a++;
+				$("#sl1").html(a)
+				$("#hjsl").html(a+c+e)
+				b += 11000;
+				$("#hj1").html(b)
+				$("#hjjg").html(b+d+e)
+			})
+			//减1
+			$("#jian1").click(function() {
+				if(a > 0 && b > 0) {
+					a--;
+					$("#sl1").html(a)
+					
+					b -= 11000;
+					$("#hj1").html(b)
+				} else {
+					alert('求求你别再点了!')
+				}
+
+			})
+
+			//加2
+			$("#jia2").click(function() {
+				c++;
+				$("#sl2").html(c)
+				$("#hjsl").html(a+c+e)
+				d += 1400;
+				$("#hj2").html(d)
+				$("#hjjg").html(d+b+e)
+			})
+			//减2
+			$("#jian2").click(function() {
+				if(c > 0 && d > 0) {
+					c--;
+					$("#sl2").html(c)
+					d -= 1400;
+					$("#hj2").html(d)
+				} else {
+					alert('求求你别再点了!')
+				}
+
+			})
+
+
+			/*
+			$("#ch1").change(function() {
+				var pd = $("#ch1").is(":checked");
+				if(pd == true) {
+					var aa = $("#hjsl").html(e + a);
+					$("#ch2").change(function() {
+						var pd = $("#ch2").is(":checked");
+						if(pd == true) {
+							$("#hjsl").html(aa + c)
+						} else if(pd == false) {
+							$("#hjsl").html(aa)
+						}
+					})
+				} else if(pd == false) {
+					$("#hjsl").html(e)
+				}
+			})
+
+			$("#ch2").change(function() {
+				var pd = $("#ch2").is(":checked");
+				if(pd == true) {
+					var bb = $("#hjsl").html(c+e)
+					console.log(bb)
+					$("#ch1").change(function(){
+						var pd = $("#ch1").is(":checked");
+						if(pd == true){
+							$("#hjsl").html($(bb).attr("value") + $(c).attr("value"))
+						}else if(pd == false){
+							$("#hjsl").html(bb)
+						}
+					})
+				} else if(pd == false) {
+					$("#hjsl").html(e)
+				}
+			})
+			*/
+		</script>
+	</body>
+
+</html>
